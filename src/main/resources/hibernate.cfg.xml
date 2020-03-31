@@ -1,0 +1,21 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+        
+<hibernate-configuration>
+	<session-factory>
+		<!-- JDBC properties -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/jugueteria?serverTimezone=GMT-5</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">Finde1997.</property>
+		
+		<property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+		
+		<!-- Echo the SQL to console -->
+		<property name="show_sql">true</property>
+		
+		<!-- Mapeo de todos las calses que son entidad -->
+		<mapping class="com.barbaro.apijuguetes.models.Juguete"/>
+	</session-factory>
+</hibernate-configuration>
